@@ -1,0 +1,41 @@
+@swagger
+/tasks/{id}:
+ get:
+     summary: get task by id
+     tags: [Tasks]
+     parameters:
+      
+     responses:
+         200:
+             description: the task was succesfully created
+             content:
+                 application/json:
+                     schema:
+                         $ref: '#/components/schemas/Task'
+         404:
+             description: some error happened
+
+@swagger
+components:
+ schemas:
+     Task:
+         type: Object
+         properties:
+             id:
+                 type: string
+                 description: the auto-generated id of task
+             name:
+                 type: string
+                 description: task name
+             description:
+                 type: string
+                 description: task description
+         required:
+             - name
+             - description
+         example:
+             id: 78l9wMhg7NS1V19zfhdec
+             name: my first task
+             description: Something to do
+                             
+     
