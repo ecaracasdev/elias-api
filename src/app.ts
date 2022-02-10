@@ -3,8 +3,8 @@ import cors from 'cors';
 import morgan from 'morgan';
 import swaggerUI from 'swagger-ui-express';
 import swaggerJsDoc from 'swagger-jsdoc';
-import { options } from './swaggerOptions';
-import taskRoutes from './routes/tasks.routes';
+import { options } from '@src/swaggerOptions';
+import taskRoutes from '@src/routes/tasks.routes';
 
 const app = express();
 

@@ -2,9 +2,16 @@
     "watch": [
         "src"
     ],
-    "ext":"ts, json",
+    "ext":"ts, json, js",
     "ignore": [
-        "src/**/*.spec.ts"
+        "src/**/*.spec.ts",
+        "node_modules",
+        "coverage",
+        "build"
     ],
-    "exec":"ts-node src/index.ts"
+    "exec":"ts-node -r tsconfig-paths/register ./src/index.ts",
+    "restartable":"rs",
+    "env":{
+        "NODE_ENV": "development"
+    }
 }

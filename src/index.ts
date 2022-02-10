@@ -1,5 +1,5 @@
-import app from './app';
-import { createConnection } from './db';
+import app from '@src/app';
+import { createConnection } from '@src/db';
 
 createConnection();
 
