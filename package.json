@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.prod.json",
     "dev": "nodemon",
-    "start": "node build/index.js",
+    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./build/src/index.js",
     "prepare": "husky install",
     "test": "jest",
     "test:watch": "jest --watch",
