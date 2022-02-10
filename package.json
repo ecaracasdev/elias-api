@@ -49,7 +49,7 @@
     "**/*.{js,jsx,ts,tsx}": [
       "yarn pretty-quick --staged ng lint ng test",
       "yarn eslint",
-      "npx prettier --write"
+      "yarn prettier --write"
     ]
   }
 }
