@@ -2,6 +2,7 @@ configurar typescript
     1
     npm i -D typescript ts-node @types/node
     npx tsc --init
+    
 configurar eslint
     2
     instalar la extension eslint en vscode
@@ -46,4 +47,22 @@ configurar husky
 
     8
     npm i -D husky lint-staged
+    npx husky-init
+
+    9
+    agregar esto a al package.json
+
+    "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+        "npx pretty-quick --staged ng lint ng test",
+        "npx eslint",
+        "npx prettier --write"
+        ]
+    }
+
+    10 
+    agregar esto al pre-commit
+
+        npm run build
+        npx lint-staged
 
