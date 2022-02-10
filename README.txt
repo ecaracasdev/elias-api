@@ -66,3 +66,30 @@ configurar husky
         npm run build
         npx lint-staged
 
+    11
+    configurar jest
+
+    yarn add -D jest ts-jest @types/jest
+
+    npx ts-jest config:init
+
+    copy this in jest.config.js
+
+    module.exports = {
+        preset: 'ts-jest',
+        testEnvironment: 'node',
+        coverageDirectory: 'coverage',
+        collectCoverageFrom: ['src/**/*.{js,ts}'],
+        coverageThreshold: {
+            global: {
+            branches: 0,
+            functions: 0,
+            lines: 0,
+            statements: 0,
+            },
+        },
+        moduleNameMapper: {
+            'src/(.*)': '<rootDir>/src/$1',
+        },
+        moduleDirectories: ['node_modules', 'src'],
+        };
