@@ -11,9 +11,9 @@ module.exports = {
       lines: 0,
       statements: 0,
     },
+    moduleNameMapper: {
+      'src/(.*)': '<rootDir>/src/$1',
+    },
+    moduleDirectories: ['node_modules', 'src'],
   },
-  moduleNameMapper: {
-    'src/(.*)': '<rootDir>/src/$1',
-  },
-  moduleDirectories: ['node_modules', 'src'],
 };

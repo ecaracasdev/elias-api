@@ -66,6 +66,9 @@ configurar husky
         npm run build
         npx lint-staged
 
+
+npm i -D ts-jest
+npx ts-jest config:init
     11
     configurar jest
 
