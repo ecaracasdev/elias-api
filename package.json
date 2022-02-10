@@ -47,9 +47,9 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "yarn pretty-quick --staged ng lint ng test",
-      "yarn eslint",
-      "yarn prettier --write"
+      "npx pretty-quick --staged ng lint ng test",
+      "npx eslint",
+      "npx prettier --write"
     ]
   }
 }
