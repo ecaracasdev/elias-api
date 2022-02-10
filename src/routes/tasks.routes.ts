@@ -1,8 +1,7 @@
-import { Router } from "express"
-import { count, createTasks, deleteTask, getTask, getTasks, updateTask } from "../controllers/tasks.controller"
+import { Router } from 'express';
+import { count, createTasks, deleteTask, getTask, getTasks, updateTask } from '../controllers/tasks.controller';
 
-const router = Router()
-
+const router = Router();
 
 /**
  * @swagger
@@ -67,10 +66,10 @@ const router = Router()
  *                          type: array
  *                          items:
  *                              $ref: '#/components/schemas/Task'
- *                              
- *      
+ *
+ *
  */
-router.get('/', getTasks)
+router.get('/', getTasks);
 
 /**
  * @swagger
@@ -87,7 +86,7 @@ router.get('/', getTasks)
  *                          type: integer
  *                          example: 15
  */
-router.get('/count', count)
+router.get('/count', count);
 
 /**
  * @swagger
@@ -103,12 +102,12 @@ router.get('/count', count)
  *                          type: array
  *                          items:
  *                              $ref: '#/components/schemas/Task'
- *                              
- *      
+ *
+ *
  */
-router.get('/:id', getTask)
+router.get('/:id', getTask);
 
-/**POST */
+/** POST */
 
 /**
  * @swagger
@@ -131,12 +130,12 @@ router.get('/:id', getTask)
  *                          $ref: '#/components/schemas/Task'
  *          500:
  *              description: some error happened
- *                              
- *      
+ *
+ *
  */
-router.post('/', createTasks)
+router.post('/', createTasks);
 
-/**DELETE */
+/** DELETE */
 
 /**
  * @swagger
@@ -161,9 +160,9 @@ router.post('/', createTasks)
  *              $ref: '#/components/schemas/TaskNotFound'
  *
  */
- router.delete("/:id", deleteTask);
+router.delete('/:id', deleteTask);
 
-/**UPDATE */
+/** UPDATE */
 
 /**
  * @swagger
@@ -181,7 +180,7 @@ router.post('/', createTasks)
  *            $ref: '#/components/schemas/Task'
  *    responses:
  *      200:
- *        description: The updated task 
+ *        description: The updated task
  *        content:
  *          application/json:
  *            schema:
@@ -194,6 +193,6 @@ router.post('/', createTasks)
  *              $ref: '#/components/schemas/TaskNotFound'
  *
  */
-router.put('/:id', updateTask)
+router.put('/:id', updateTask);
 
-export default router
+export default router;

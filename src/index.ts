@@ -1,8 +1,8 @@
-import app from './app'
-import { createConnection } from './db'
+import app from './app';
+import { createConnection } from './db';
 
-createConnection()
+createConnection();
 
-app.listen(app.get('port'))
+app.listen(app.get('port'));
 
-console.log(`server listening on port ${app.get('port')}`)
+console.log(`server listening on port ${app.get('port')}`);
